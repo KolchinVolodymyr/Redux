@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import {connect} from 'react-redux'
 import './App.scss'
+import Counter from './Counter'
 
 class App extends Component {
 
@@ -20,6 +21,8 @@ class App extends Component {
           <button onClick={() => this.props.onAddNumber(15)}>Добавить 15</button>
           <button onClick={() => this.props.onAddNumber(-17)}>Вычесть 17</button>
         </div>
+
+        <Counter />
       </div>
     )
   }
@@ -27,7 +30,7 @@ class App extends Component {
 
 function mapStateToProps(state) {
   return {
-    counter: state.counter
+    counter: state.counter1.counter
   }
 }
 
